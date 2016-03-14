@@ -1,0 +1,4 @@
+MainPackage=C:\Users\Алексей\Documents\Visual Studio 2015\Projects\SSD.WingLoadCalculator\SSD.WingLoadCalculator\bin\Release\SSD.WingLoadCalculator_1.1.0.2_AnyCPU.appx
+SymbolPackage=C:\Users\Алексей\Documents\Visual Studio 2015\Projects\SSD.WingLoadCalculator\SSD.WingLoadCalculator\AppPackages\SSD.WingLoadCalculator_1.1.0.2_Test\SSD.WingLoadCalculator_1.1.0.2_AnyCPU.appxsym
+ResourcePack=C:\Users\Алексей\Documents\Visual Studio 2015\Projects\SSD.WingLoadCalculator\SSD.WingLoadCalculator\bin\Release\SSD.WingLoadCalculator_1.1.0.2_scale-100.appx
+ResourcePack=C:\Users\Алексей\Documents\Visual Studio 2015\Projects\SSD.WingLoadCalculator\SSD.WingLoadCalculator\bin\Release\SSD.WingLoadCalculator_1.1.0.2_scale-140.appx
