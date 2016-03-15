@@ -104,7 +104,7 @@
         </TextBlock>
         <TextBlock FontSize="15" HorizontalAlignment="Right" Grid.Row="10" Grid.Column="2">
             фунт/фут<Run Typography.Variants="Superscript">2</Run>
-            (lb/ft<Run Typography.Variants="Superscript">2</Run>)
+            (psf)
         </TextBlock>
         <TextBox x:Name="textBoxWingLoad_kg_sqm" Grid.Row="11" TextWrapping="Wrap" 
                     Text="{Binding WingLoad_kg_sqm, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"  
