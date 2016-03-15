@@ -12,7 +12,7 @@ namespace SSD.WingLoadCalculator
         private double _wingSize_sqm;
         private double _wingSize_sqft;
         private double _wingLoad_kg_sqm;
-        private double _wingLoad_lb_sqft;
+        private double _wingLoad_psf;
 
         public event PropertyChangedEventHandler PropertyChanged;
 
@@ -23,10 +23,7 @@ namespace SSD.WingLoadCalculator
 
         protected virtual void OnPropertyChanged(string propertyName)
         {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-            }
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
 
         public double BodyWeight_kg
@@ -39,8 +36,8 @@ namespace SSD.WingLoadCalculator
                     _bodyWeight_kg = value;
                     _bodyWeight_lb = Kg2Lb(_bodyWeight_kg);
 
-                    OnPropertyChanged("BodyWeight_kg");
-                    OnPropertyChanged("BodyWeight_lb");
+                    OnPropertyChanged(nameof(BodyWeight_kg));
+                    OnPropertyChanged(nameof(BodyWeight_lb));
 
                     CalculateWingLoad();
                 }
@@ -57,8 +54,8 @@ namespace SSD.WingLoadCalculator
                     _bodyWeight_lb = value;
                     _bodyWeight_kg = Lb2Kg(_bodyWeight_lb);
 
-                    OnPropertyChanged("BodyWeight_lb");
-                    OnPropertyChanged("BodyWeight_kg");
+                    OnPropertyChanged(nameof(BodyWeight_kg));
+                    OnPropertyChanged(nameof(BodyWeight_lb));
 
                     CalculateWingLoad();
                 }
@@ -75,8 +72,8 @@ namespace SSD.WingLoadCalculator
                     _gearWeight_lb = value;
                     _gearWeight_kg = Lb2Kg(_gearWeight_lb);
 
-                    OnPropertyChanged("GearWeight_lb");
-                    OnPropertyChanged("GearWeight_kg");
+                    OnPropertyChanged(nameof(GearWeight_kg));
+                    OnPropertyChanged(nameof(GearWeight_lb));
 
                     CalculateWingLoad();
                 }
@@ -93,8 +90,8 @@ namespace SSD.WingLoadCalculator
                     _gearWeight_kg = value;
                     _gearWeight_lb = Kg2Lb(_gearWeight_kg);
 
-                    OnPropertyChanged("GearWeight_lb");
-                    OnPropertyChanged("GearWeight_kg");
+                    OnPropertyChanged(nameof(GearWeight_kg));
+                    OnPropertyChanged(nameof(GearWeight_lb));
 
                     CalculateWingLoad();
                 }
@@ -111,8 +108,8 @@ namespace SSD.WingLoadCalculator
                     _wingSize_sqm = value;
                     _wingSize_sqft = Sqm2Sqft(_wingSize_sqm);
 
-                    OnPropertyChanged("WingSize_sqm");
-                    OnPropertyChanged("WingSize_sqft");
+                    OnPropertyChanged(nameof(WingSize_sqm));
+                    OnPropertyChanged(nameof(WingSize_sqft));
 
                     CalculateWingLoad();
                 }
@@ -129,8 +126,8 @@ namespace SSD.WingLoadCalculator
                     _wingSize_sqft = value;
                     _wingSize_sqm = Sqft2Sqm(_wingSize_sqft);
 
-                    OnPropertyChanged("WingSize_sqm");
-                    OnPropertyChanged("WingSize_sqft");
+                    OnPropertyChanged(nameof(WingSize_sqm));
+                    OnPropertyChanged(nameof(WingSize_sqft));
 
                     CalculateWingLoad();
                 }
@@ -149,34 +146,34 @@ namespace SSD.WingLoadCalculator
                         _wingSize_sqm = (_bodyWeight_kg + _gearWeight_kg) / _wingLoad_kg_sqm;
                     _wingSize_sqft = Sqm2Sqft(_wingSize_sqm);
                     if (_wingSize_sqft > 0)
-                        _wingLoad_lb_sqft = (_bodyWeight_lb + _gearWeight_lb) / _wingSize_sqft;
+                        _wingLoad_psf = (_bodyWeight_lb + _gearWeight_lb) / _wingSize_sqft;
 
-                    OnPropertyChanged("WingLoad_kg_sqm");
-                    OnPropertyChanged("WingLoad_lb_sqft");
-                    OnPropertyChanged("WingSize_sqft");
-                    OnPropertyChanged("WingSize_sqm");
+                    OnPropertyChanged(nameof(WingLoad_kg_sqm));
+                    OnPropertyChanged(nameof(WingLoad_psf));
+                    OnPropertyChanged(nameof(WingSize_sqft));
+                    OnPropertyChanged(nameof(WingSize_sqm));
                 }
             }
         }
 
-        public double WingLoad_lb_sqft
+        public double WingLoad_psf
         {
-            get { return Math.Round(_wingLoad_lb_sqft, 2); }
+            get { return Math.Round(_wingLoad_psf, 2); }
             set
             {
-                if (_wingLoad_lb_sqft != value)
+                if (_wingLoad_psf != value)
                 {
-                    _wingLoad_lb_sqft = value;
-                    if (_wingLoad_lb_sqft > 0)
-                        _wingSize_sqft = (_bodyWeight_lb + _gearWeight_lb) / _wingLoad_lb_sqft;
+                    _wingLoad_psf = value;
+                    if (_wingLoad_psf > 0)
+                        _wingSize_sqft = (_bodyWeight_lb + _gearWeight_lb) / _wingLoad_psf;
                     _wingSize_sqm = Sqft2Sqm(_wingSize_sqft);
                     if (_wingSize_sqm > 0)
                         _wingLoad_kg_sqm = (_bodyWeight_kg + _gearWeight_kg) / _wingSize_sqm;
 
-                    OnPropertyChanged("WingLoad_kg_sqm");
-                    OnPropertyChanged("WingLoad_lb_sqft");
-                    OnPropertyChanged("WingSize_sqft");
-                    OnPropertyChanged("WingSize_sqm");
+                    OnPropertyChanged(nameof(WingLoad_kg_sqm));
+                    OnPropertyChanged(nameof(WingLoad_psf));
+                    OnPropertyChanged(nameof(WingSize_sqft));
+                    OnPropertyChanged(nameof(WingSize_sqm));
                 }
             }
         }
@@ -186,10 +183,10 @@ namespace SSD.WingLoadCalculator
             if (_wingSize_sqft > 0 && _wingSize_sqm > 0)
             {
                 _wingLoad_kg_sqm = (_bodyWeight_kg + _gearWeight_kg) / _wingSize_sqm;
-                _wingLoad_lb_sqft = (_bodyWeight_lb + _gearWeight_lb) / _wingSize_sqft;
+                _wingLoad_psf = (_bodyWeight_lb + _gearWeight_lb) / _wingSize_sqft;
 
-                OnPropertyChanged("WingLoad_kg_sqm");
-                OnPropertyChanged("WingLoad_lb_sqft");
+                OnPropertyChanged(nameof(WingLoad_kg_sqm));
+                OnPropertyChanged(nameof(WingLoad_psf));
             }
         }
 

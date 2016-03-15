@@ -111,7 +111,7 @@
                     VerticalAlignment="Center" InputScope="Number"/>
         <TextBlock Text="&lt;-&gt;" Grid.Row="11" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20"/>
         <TextBox x:Name="textBoxWingLoad_lb_sqft" Grid.Row="11" Grid.Column="2" TextWrapping="Wrap" 
-                    Text="{Binding WingLoad_lb_sqft, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" 
+                    Text="{Binding WingLoad_psf, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" 
                     VerticalAlignment="Center" InputScope="Number"/>
 
         <Image 
