@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.24720.0
+VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SSD.WingLoadCalculator", "SSD.WingLoadCalculator\SSD.WingLoadCalculator.csproj", "{0E2BAE05-49AE-4E45-9E2A-C223854579CB}"
 EndProject
@@ -10,6 +10,8 @@ EndProject
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "SSD.WingLoadCalculator.Shared", "SSD.WingLoadCalculator.Shared\SSD.WingLoadCalculator.Shared.shproj", "{6398FC93-3B3D-4790-A496-E6AE35EBD3E4}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SSD.WingLoadCalculator.Windows", "SSD.WingLoadCalculator.Windows\SSD.WingLoadCalculator.Windows.csproj", "{537C8154-537E-481C-AD87-62E4CE9149DA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WingLoadCalculator.Test", "WingLoadCalculator.Test\WingLoadCalculator.Test.csproj", "{31622602-1FA4-439E-B53A-3729FD99B88E}"
 EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
@@ -76,6 +78,22 @@ Global
 		{537C8154-537E-481C-AD87-62E4CE9149DA}.Release|x86.ActiveCfg = Release|x86
 		{537C8154-537E-481C-AD87-62E4CE9149DA}.Release|x86.Build.0 = Release|x86
 		{537C8154-537E-481C-AD87-62E4CE9149DA}.Release|x86.Deploy.0 = Release|x86
+		{31622602-1FA4-439E-B53A-3729FD99B88E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{31622602-1FA4-439E-B53A-3729FD99B88E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{31622602-1FA4-439E-B53A-3729FD99B88E}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{31622602-1FA4-439E-B53A-3729FD99B88E}.Debug|ARM.Build.0 = Debug|Any CPU
+		{31622602-1FA4-439E-B53A-3729FD99B88E}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{31622602-1FA4-439E-B53A-3729FD99B88E}.Debug|x64.Build.0 = Debug|Any CPU
+		{31622602-1FA4-439E-B53A-3729FD99B88E}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{31622602-1FA4-439E-B53A-3729FD99B88E}.Debug|x86.Build.0 = Debug|Any CPU
+		{31622602-1FA4-439E-B53A-3729FD99B88E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{31622602-1FA4-439E-B53A-3729FD99B88E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{31622602-1FA4-439E-B53A-3729FD99B88E}.Release|ARM.ActiveCfg = Release|Any CPU
+		{31622602-1FA4-439E-B53A-3729FD99B88E}.Release|ARM.Build.0 = Release|Any CPU
+		{31622602-1FA4-439E-B53A-3729FD99B88E}.Release|x64.ActiveCfg = Release|Any CPU
+		{31622602-1FA4-439E-B53A-3729FD99B88E}.Release|x64.Build.0 = Release|Any CPU
+		{31622602-1FA4-439E-B53A-3729FD99B88E}.Release|x86.ActiveCfg = Release|Any CPU
+		{31622602-1FA4-439E-B53A-3729FD99B88E}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
